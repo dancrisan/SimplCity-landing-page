@@ -9,8 +9,8 @@ STMP is mail server which is responsible for sending and recieving email.
 var smtpTransport = nodemailer.createTransport("SMTP",{
 	service: "Gmail",
 	auth: {
-		user: "dan.crisan.mtl@gmail.com",
-		pass: "imtrlpfodrnrxiqf"
+		user: "yourGmailAccound@gmail.com",
+		pass: "yourPassword"
 	}
 });
 /*------------------SMTP Over-----------------------------*/
@@ -26,7 +26,7 @@ app.get('/send',function(req,res){
 	//console.log(req.query.to);
 	var mailOptions={
 		//to : req.query.to,
-		to : "dan.crisan@live.com",
+		to : "destinationAddress@example.com",
 		subject : req.query.subject,
 		//text : req.query.text
 	}
